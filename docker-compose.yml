@@ -1,0 +1,9 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  jupyter:
+    image: jupyter/scipy-notebook:016833b15ceb
+    volumes:
+      - ./:/home/jovyan
+    working_dir: /home/jovyan
+    ports:
+      - "8888:8888"  # Jupyter notebook /tree | JupyterLab /lab
